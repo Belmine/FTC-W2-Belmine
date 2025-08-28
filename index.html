@@ -4,31 +4,418 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spending Management Landing page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/layout.css">
     </head>
 <body>
-<!-- Primary Large Button -->
-<button class="btn btn--primary btn--large">Label</button>
 
-<!-- Secondary Medium avec icône gauche -->
-<button class="btn btn--secondary btn--medium btn--icon-left">
-  <svg class="btn__icon">...</svg>
-  Label
-</button>
+    
+     <section class="testimonials-section">
+        <div class="testimonials-container">
+            <!-- Header -->
+            <div class="testimonials-header">
+                <p class="testimonials-subtitle">WHAT THEY SAY</p>
+                <h2 class="testimonials-title">Our User Kind Words</h2>
+                <p class="testimonials-description">
+                    Here are some testimonials from our user after using Spend.In to manage their business expenses.
+                </p>
+            </div>
 
-<!-- Small Icon Only -->
-<button class="btn btn--primary btn--small btn--icon-only">
-  <svg class="btn__icon">...</svg>
-</button>
+            <!-- Carousel -->
+            <div class="testimonials-carousel">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <h3 class="testimonial-title">It's just incredible!</h3>
+                        <p class="testimonial-content">
+                            It's just 1 month since I'm using Spend.In to manage my business expenses, but the result is very satisfying. My business finance now more better than before, thanks to Spend.In!
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/jimmy.png" alt="Jimmy Bartney" class="author-avatar">
+                            <div class="author-info">
+                                <p class="author-name">Jimmy Bartney</p>
+                                <p class="author-role">Product Manager at Picko Lab</p>
+                            </div>
+                        </div>
+                    </div>
 
-<!-- Minimal Button -->
-<button class="btn btn--minimal btn--medium">Label</button>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <h3 class="testimonial-title">Satisfied User Here!</h3>
+                        <p class="testimonial-content">
+                            Never thought that with Spend.In managing my business expenses is so easy! Been using this platform for 3 months and still counting!
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/natasha.png" alt="Natasha Romanoff" class="author-avatar">
+                            <div class="author-info">
+                                <p class="author-name">Natasha Romanoff</p>
+                                <p class="author-role">Black Widow</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <h3 class="testimonial-title">No doubt, Spend.In is the best!</h3>
+                        <p class="testimonial-content">
+                            "The best!" That's what I want to say to this platform, didn't know that there's a platform to help you manage your business expenses like this! Very recommended to you who have a big business!
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/moritika.png" alt="Montika Kazuki" class="author-avatar">
+                            <div class="author-info">
+                                <p class="author-name">Montika Kazuki</p>
+                                <p class="author-role">Finance Manager at Mangan</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <h3 class="testimonial-title">Satisfied User Here!</h3>
+                        <p class="testimonial-content">
+I’ve been using Spend.In for 6 months now, and it has completely transformed the way I handle my business expenses. The platform is simple, clear, and super effective. My financial workflow is way more organized than before!                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/daniel.jpg" alt="Daniel Green" class="author-avatar">
+                            <div class="author-info">
+                                <p class="author-name">Daniel Green</p>
+                                <p class="author-role">Entrepreneur at GreenTech Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <h3 class="testimonial-title">No doubt, Spend.In is the best!</h3>
+                        <p class="testimonial-content">
+Spend.In is a real game changer! I used to spend hours tracking my expenses, but now everything is automated and stress-free. I can finally focus more on growing my business instead of worrying about numbers.                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/sophia.jpg" alt="Montika Kazuki" class="author-avatar">
+                            <div class="author-info">
+                                <p class="author-name">Sophia Mendes</p>
+                                <p class="author-role">CEO at BrightFuture Agency</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="testimonials-navigation">
+                <button class="nav-button" id="prevBtn" onclick="previousSlide()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="nav-button active" id="nextBtn" onclick="nextSlide()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="pricing-section">
+        <div class="pricing-container">
+            <!-- Header -->
+            <div class="pricing-header">
+                <h2 class="pricing-title">Ready to Get Started?</h2>
+                <p class="pricing-subtitle">Choose a plan that suits your business needs</p>
+                
+                <!-- Billing Toggle -->
+                <div class="billing-toggle">
+                    <span class="toggle-label active" data-period="monthly">Monthly</span>
+                    <div class="toggle-switch" id="billingToggle"></div>
+                    <span class="toggle-label" data-period="yearly">Yearly</span>
+                </div>
+                <div>
+                    <span class="save-badge">Save 45%</span>
+
+                        <img src="assets/images/fleche-vers-le-bas.png" alt="save-45%" class="arrow-down">
+                </div>
+
+            </div>
+
+
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="card-header"> 
+                         <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="i-product fa-solid fa-heart-circle-check" ></i>
+                            <h3 class="plan-name">Free</h3>
+                
+                        </div>
+                        
+                        <p class="plan-description">Perfect plan to get started</p>
+                        <div class="plan-price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="plan-tagline">A free plan grants you access to some cool features of Spend.In.</p>
+                    </div>
+
+                    <ul class="features-list">
+                        <li class="feature-item">
+                            <i class="fa-solid fa-circle-check check-icon"></i>
+                             Sync across device
+                        </li>
+                        <li class="feature-item">
+                                                        <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            5 workspace
+                        </li>
+                        <li class="feature-item">
+                                                        <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            Collaborate with 5 user
+                        </li>
+                        <li class="feature-item">
+                           <i class="fa-solid fa-circle-xmark cross-icon"></i>
+                            Sharing permission
+                        </li>
+                        <li class="feature-item">
+                                                       <i class="fa-solid fa-circle-xmark cross-icon"></i>
+
+                            Admin tools
+                        </li>
+                        <li class="feature-item">
+                                                       <i class="fa-solid fa-circle-xmark cross-icon"></i>
+
+                            100+ Integrations
+                        </li>
+                    </ul>
+
+                    <button class="cta-button primary">Get Your Free Plan</button>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="card-header">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-crown i-product"></i>
+                            <h3 class="plan-name">Pro</h3>
+                
+                        </div>
+                        
+                        <p class="plan-description">Perfect plan for professionals</p>
+                        <div class="plan-price">
+                            <span class="price-amount">$12</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="plan-tagline">For professional only! Start arranging your expenses with our best bundle.</p>
+                    </div>
+
+                    <ul class="features-list">
+                        <li class="feature-item">
+                          <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            Everything in Free Plan
+                        </li>
+                        <li class="feature-item">
+                          <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            Unlimited workspace
+                        </li>
+                        <li class="feature-item">
+                          <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            Collaborative workspace
+                        </li>
+                        <li class="feature-item">
+                          <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            Sharing permission
+                        </li>
+                        <li class="feature-item">
+                          <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            Admin tools
+                        </li>
+                        <li class="feature-item">
+                          <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            100+ integrations
+                        </li>
+                    </ul>
+
+                    <button class="cta-button primary">Get Started</button>
+                </div>
+
+                <!-- Ultimate Plan -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                         <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-bolt i-product"></i>
+                            <h3 class="plan-name">Ultimate</h3>
+                
+                        </div>
+                        
+                        <p class="plan-description">Best suits for great company</p>
+                        <div class="plan-price">
+                            <span class="price-amount">$33</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="plan-tagline">If you a finance manager at big company, this plan is a perfect match.</p>
+                    </div>
+
+                    <ul class="features-list">
+                        <li class="feature-item">
+                          <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            Everything in Pro Plan
+                        </li>
+                        <li class="feature-item">
+                          <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            Daily performance reports
+                        </li>
+                        <li class="feature-item">
+                          <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            Dedicated assistant
+                        </li>
+                        <li class="feature-item">
+                          <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            Artificial intelligence
+                        </li>
+                        <li class="feature-item">
+                          <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            Marketing tools & automations
+                        </li>
+                        <li class="feature-item">
+                          <i class="fa-solid fa-circle-check check-icon"></i>
+
+                            Advanced security
+                        </li>
+                    </ul>
+
+                    <button class="cta-button primary">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Contenu principal du footer -->
+            <div class="footer-content">
+                <!-- Section Brand / Logo -->
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <div class="logo-icon">$</div>
+                        <span class="logo-text">Spend.In</span>
+                    </a>
+                    <p class="footer-description">
+                        Data visualization, and expense management for your business.
+                    </p>
+                </div>
+
+                <!-- Conteneur pour les colonnes sur mobile -->
+                <div class="footer-columns-mobile">
+                    <!-- Colonne Product -->
+                    <div class="footer-column">
+                        <h3 class="footer-column-title">Product</h3>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link">Digital Invoice</a></li>
+                            <li><a href="#" class="footer-link">Insights</a></li>
+                            <li><a href="#" class="footer-link">Reimbursements</a></li>
+                            <li><a href="#" class="footer-link">Virtual Assistant</a></li>
+                            <li><a href="#" class="footer-link">Artificial Intelligence</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Colonne Company -->
+                    <div class="footer-column">
+                        <h3 class="footer-column-title">Company</h3>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link">About Us</a></li>
+                            <li><a href="#" class="footer-link">Newsletters</a></li>
+                            <li><a href="#" class="footer-link">Our Partners</a></li>
+                            <li><a href="#" class="footer-link">Career</a></li>
+                            <li><a href="#" class="footer-link">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Colonne Resources -->
+                    <div class="footer-column">
+                        <h3 class="footer-column-title">Resources</h3>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link">Blog</a></li>
+                            <li><a href="#" class="footer-link">Pricing</a></li>
+                            <li><a href="#" class="footer-link">FAQ</a></li>
+                            <li><a href="#" class="footer-link">Events</a></li>
+                            <li><a href="#" class="footer-link">Ebook & Guide</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Colonne Follow Us - prend toute la largeur sur mobile -->
+                    <div class="footer-column footer-social-mobile">
+                        <h3 class="footer-column-title">Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a href="#" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                                Twitter
+                            </a>
+                            <a href="#" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.222.083.343-.09.369-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.747 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.624 0 11.99-5.367 11.99-11.99C24.007 5.367 18.641.001 12.017.001z"/>
+                                </svg>
+                                Instagram
+                            </a>
+                            <a href="#" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                Facebook
+                            </a>
+                            <a href="#" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                                YouTube
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section bottom avec liens légaux et copyright -->
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#" class="footer-legal-link">Privacy Policy</a>
+                    <span class="footer-legal-separator">|</span>
+                    <a href="#" class="footer-legal-link">Terms & Conditions</a>
+                    <span class="footer-legal-separator">|</span>
+                    <a href="#" class="footer-legal-link">Cookie Policy</a>
+                </div>
+                <div class="footer-copyright">
+                    © Picko Lab 2022
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+    <script src="js/main.js"></script>
 
     
 </body>

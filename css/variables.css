@@ -65,6 +65,7 @@
   --secondary-300: #90A3BF;
   --secondary-200: #C3D4E9;
   --secondary-100: #E0E9F4;
+  --sombre:#F3F5F7;
 
   /* === TYPOGRAPHIE === */
   --font-family: "Plus Jakarta Sans", sans-serif ; ; 
@@ -116,6 +117,7 @@
   --radius-lg: 0.5rem;    /* 8px */
   --radius-xl: 0.75rem;   /* 12px */
   --radius-2xl: 1rem;     /* 16px */
+  --radius-4xl: 1.5rem;   /* 24px */
   --radius-full: 9999px;
 
   /* === SHADOWS === */
