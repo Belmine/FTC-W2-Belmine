@@ -1,10 +1,115 @@
-//Js pour le pricing section 
+document.addEventListener('DOMContentLoaded', function() {
+            const heroTitle = document.querySelector('.hero-title');
+            const heroSubtitle = document.querySelector('.hero-subtitle');
+            const heroButtons = document.querySelector('.hero-buttons');
+            const dashboardPreview = document.querySelector('.dashboard-preview');
+            
+            // Animation séquentielle
+            setTimeout(() => {
+                heroTitle.style.opacity = '0';
+                heroTitle.style.transform = 'translateY(30px)';
+                heroTitle.style.transition = 'all 0.8s ease';
+                heroTitle.style.opacity = '1';
+                heroTitle.style.transform = 'translateY(0)';
+            }, 200);
+            
+            setTimeout(() => {
+                heroSubtitle.style.opacity = '0';
+                heroSubtitle.style.transform = 'translateY(30px)';
+                heroSubtitle.style.transition = 'all 0.8s ease';
+                heroSubtitle.style.opacity = '1';
+                heroSubtitle.style.transform = 'translateY(0)';
+            }, 400);
+            
+            setTimeout(() => {
+                heroButtons.style.opacity = '0';
+                heroButtons.style.transform = 'translateY(30px)';
+                heroButtons.style.transition = 'all 0.8s ease';
+                heroButtons.style.opacity = '1';
+                heroButtons.style.transform = 'translateY(0)';
+            }, 600);
+            
+            setTimeout(() => {
+                dashboardPreview.style.opacity = '0';
+                dashboardPreview.style.transform = 'translateY(50px)';
+                dashboardPreview.style.transition = 'all 1s ease';
+                dashboardPreview.style.opacity = '1';
+                dashboardPreview.style.transform = 'translateY(0)';
+            }, 800);
+        });
 
-// Toggle billing functionality
+        // Interactions des boutons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Animation de clic
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // Effet hover sur les liens de navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                const arrow = this.querySelector('.dropdown-arrow');
+                if (arrow) {
+                    arrow.style.transform = 'rotate(180deg)';
+                }
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                const arrow = this.querySelector('.dropdown-arrow');
+                if (arrow) {
+                    arrow.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileToggle = document.querySelector('.menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const closeMenu = document.querySelector('.mobile-menu__close');
+            const menuLinks = document.querySelectorAll('.mobile-menu__list a');
+            const mobileMenuCta = document.querySelector('.mobile-menu__cta');
+
+            const toggleMenu = (show) => {
+                mobileMenu.classList.toggle('active', show);
+                document.body.style.overflow = show ? 'hidden' : '';
+            };
+
+            mobileToggle.addEventListener('click', () => toggleMenu(true));
+            closeMenu.addEventListener('click', () => toggleMenu(false));
+
+            // Fermer le menu quand on clique sur un lien
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => toggleMenu(false));
+            });
+            mobileMenuCta.addEventListener('click', () => toggleMenu(false));
+
+
+
+            // Fermer le menu avec la touche Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    toggleMenu(false);
+                }
+            });
+        });
+
+
+
+
+
+
+
+
+
+
         const billingToggle = document.getElementById('billingToggle');
         const toggleLabels = document.querySelectorAll('.toggle-label');
         const priceAmounts = document.querySelectorAll('.price-amount');
-            const title = document.querySelector(".pricing-title");
+        const title = document.querySelector(".pricing-title");
 
  
 
