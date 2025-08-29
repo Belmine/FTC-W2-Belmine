@@ -210,3 +210,52 @@ let currentSlide = 0;
                 }, 150);
             });
         });
+
+
+         function toggleContent(type) {
+            // Update button states
+            const buttons = document.querySelectorAll('.toggle-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            if (type === 'with') {
+                buttons[0].classList.add('active');
+            } else {
+                buttons[1].classList.add('active');
+            }
+
+            // Update content sections
+            const contentSections = document.querySelectorAll('.content-section');
+            contentSections.forEach(section => section.classList.remove('active'));
+            
+            document.getElementById(type + '-content').classList.add('active');
+
+            // Update dashboard data and chart
+            updateDashboard(type);
+        }
+
+        function updateDashboard(type) {
+            const amountValue = document.getElementById('amount-value');
+            const amountChange = document.getElementById('amount-change');
+            const changePercent = document.getElementById('change-percent');
+            const positiveChart = document.getElementById('positive-chart');
+            const negativeChart = document.getElementById('negative-chart');
+
+            if (type === 'with') {
+                amountValue.textContent = '$85,211.00';
+                amountChange.className = 'amount-change positive';
+                amountChange.innerHTML = '<span class="change-icon">▲</span><span>65,1%</span>';
+                positiveChart.style.display = 'block';
+                negativeChart.style.display = 'none';
+            } else {
+                amountValue.textContent = '$25,780.00';
+                amountChange.className = 'amount-change negative';
+                amountChange.innerHTML = '<span class="change-icon">▼</span><span>45,6%</span>';
+                positiveChart.style.display = 'none';
+                negativeChart.style.display = 'block';
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDashboard('with');
+        });

@@ -15,6 +15,140 @@
     <link rel="stylesheet" href="css/layout.css">
     </head>
 <body>
+    <section class="productivity-section">
+        <div class="productivity-container">
+            <!-- Left Content -->
+            <div class="productivity-content">
+                <p class="productivity-subtitle">INCREASE PRODUCTIVITY</p>
+                <h2 class="productivity-title">Reduce Time in Doing Manual Work Managing Expenses</h2>
+                
+                <!-- Toggle Buttons -->
+                <div class="toggle-buttons">
+                    <button class="toggle-btn active" onclick="toggleContent('with')">With Spend.In</button>
+                    <button class="toggle-btn" onclick="toggleContent('without')">Without Spend.In</button>
+                </div>
+
+                <!-- With Spend.In Content -->
+                <div class="content-section active" id="with-content">
+                    <h3 class="section-title">Track Business Expenses until Its Milisecond</h3>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon positive">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <p class="feature-text">Analyze your business cost easily with group transaction thorugh tagging feature.</p>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon positive">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <p class="feature-text">Add more than one card for payment. Integrated with more than 50+ payment method and support bulk payment.</p>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon positive">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <p class="feature-text">Arrange your business expenses by date, name, etc., with just one click.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Without Spend.In Content -->
+                <div class="content-section" id="without-content">
+                    <h3 class="section-title">Track Business Expenses until its Milisecond</h3>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon negative">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <p class="feature-text">Complex recording process due to every administrative file in a different place.</p>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon negative">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <p class="feature-text">Need more effort to pay manually one by one invoice because there is no payment accommodation.</p>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon negative">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <p class="feature-text">Manual data arranging needs a long time because the different months/years are not in the same place.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Content - Dashboard -->
+            <div class="productivity-dashboard">
+                <div class="dashboard-card" id="dashboard">
+                    <div class="dashboard-header">
+                        <h4 class="dashboard-title">Balance Statistics</h4>
+                        <span class="dashboard-menu">⋯</span>
+                    </div>
+                    
+                    <div class="dashboard-amount">
+                        <div class="amount-value" id="amount-value">$85,211.00</div>
+                        <div class="amount-change positive" id="amount-change">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <span id="change-percent">5,1%</span>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-chart">
+                        <svg class="chart-svg" viewBox="0 0 350 160" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Chart Grid Lines -->
+                            <defs>
+                                <linearGradient id="positiveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#9CD323;stop-opacity:0.3" />
+                                    <stop offset="100%" style="stop-color:#9CD323;stop-opacity:0.05" />
+                                </linearGradient>
+                                <linearGradient id="negativeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FF4423;stop-opacity:0.3" />
+                                    <stop offset="100%" style="stop-color:#FF4423;stop-opacity:0.05" />
+                                </linearGradient>
+                            </defs>
+                            
+                            <g id="positive-chart">
+                                <path d="M20 140 L50 130 L80 135 L110 120 L140 110 L170 90 L200 75 L230 65 L260 55 L290 45 L320 35" 
+                                      stroke="#9CD323" 
+                                      stroke-width="3" 
+                                      fill="none" 
+                                      stroke-linecap="round" 
+                                      stroke-linejoin="round"/>
+                                <path d="M20 140 L50 130 L80 135 L110 120 L140 110 L170 90 L200 75 L230 65 L260 55 L290 45 L320 35 L320 160 L20 160 Z" 
+                                      fill="url(#positiveGradient)"/>
+                            </g>
+                            
+                            <!-- Negative Chart Path (Without Spend.In) -->
+                            <g id="negative-chart" style="display: none;">
+                                <path d="M20 80 L50 70 L80 90 L110 85 L140 95 L170 105 L200 115 L230 125 L260 135 L290 145 L320 150" 
+                                      stroke="#FF4423" 
+                                      stroke-width="3" 
+                                      fill="none" 
+                                      stroke-linecap="round" 
+                                      stroke-linejoin="round"/>
+                                <path d="M20 80 L50 70 L80 90 L110 85 L140 95 L170 105 L200 115 L230 125 L260 135 L290 145 L320 150 L320 160 L20 160 Z" 
+                                      fill="url(#negativeGradient)"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     
      <section class="testimonials-section">
