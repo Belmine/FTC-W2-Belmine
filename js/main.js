@@ -1,9 +1,4 @@
-        function handleDemo() {
-            alert('Redirection vers la démo gratuite !');
-            // Ici vous pouvez ajouter la logique de redirection
-            // window.location.href = '/demo';
-        }
-
+       
         // Animation des barres au chargement
         document.addEventListener('DOMContentLoaded', function() {
             const bars = document.querySelectorAll('.bar');
@@ -55,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 800);
         });
 
-        // Interactions des boutons
         document.querySelectorAll('button').forEach(button => {
             button.addEventListener('click', function(e) {
                 // Animation de clic
@@ -66,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Effet hover sur les liens de navigation
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('mouseenter', function() {
                 const arrow = this.querySelector('.dropdown-arrow');
@@ -209,7 +202,6 @@ let currentSlide = 0;
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         
-        // Fonction pour calculer les slides visibles selon la largeur d'écran
         function getSlidesPerView() {
             return window.innerWidth >= 768 ? 3 : 1;
         }
