@@ -1,3 +1,20 @@
+        function handleDemo() {
+            alert('Redirection vers la démo gratuite !');
+            // Ici vous pouvez ajouter la logique de redirection
+            // window.location.href = '/demo';
+        }
+
+        // Animation des barres au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            const bars = document.querySelectorAll('.bar');
+            bars.forEach((bar, index) => {
+                bar.style.height = '0%';
+                setTimeout(() => {
+                    bar.style.transition = 'height 0.8s ease-out';
+                    bar.style.height = bar.getAttribute('style').match(/height: (\d+%)/)[1];
+                }, 600 + (index * 100));
+            });
+        });
 document.addEventListener('DOMContentLoaded', function() {
             const heroTitle = document.querySelector('.hero-title');
             const heroSubtitle = document.querySelector('.hero-subtitle');

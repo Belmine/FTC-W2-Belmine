@@ -156,11 +156,7 @@
 .bg-white { background-color: var(--primary-0); }
 
 /* === RESET ET BASE === */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 
 body {
   font-family: var(--font-family);
@@ -173,12 +169,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* === TYPOGRAPHIE === */
-/* h1, h2, h3, h4, h5, h6 {
-  font-weight: var(--font-semibold);
-  line-height: var(--leading-tight);
-  color: var(--secondary-900);
-} */
+
 
 h1 { font-size: var(--text-5xl); }
 h2 { font-size: var(--text-4xl); }

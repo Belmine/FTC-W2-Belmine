@@ -1,4 +1,144 @@
-    
+
+         /* Media Queries pour le responsive */
+         @media (max-width: 1024px) {
+        .benefits-two-container {
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .benefits-two-header,
+        .benefits-two-description {
+            text-align: left;
+        }
+        }
+        @media (max-width: 1024px) {
+            .works-section {
+                padding: 80px 0 60px 0;
+            }
+            
+            .works-steps {
+                gap: 32px;
+                margin-bottom: 48px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .works-section {
+                padding: 60px 0 40px 0;
+            }
+            
+            .works-container {
+                padding: 0 var(--space-4);
+            }
+            
+            .works-header {
+                margin-bottom: 60px;
+            }
+            
+            .works-title {
+                font-size: 36px;
+            }
+            
+            .works-steps {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                margin-bottom: 48px;
+            }
+            
+            .works-actions {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .works-title {
+                font-size: 32px;
+            }
+            
+            .works-description {
+                font-size: 16px;
+            }
+            
+            .step-title {
+                font-size: 18px;
+            }
+            
+            .step-description {
+                font-size: 15px;
+            }
+        }
+        @media (max-width: 1024px) {
+            .benefits-section {
+                padding: 80px 0 60px 0;
+            }
+            
+            .benefits-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 32px;
+                margin-bottom: 60px;
+            }
+            
+            .benefits-description {
+                max-width: 100%;
+                margin-top: 0;
+            }
+            
+            .benefits-cards {
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .benefits-section {
+                padding: 60px 0 40px 0;
+            }
+            
+            .benefits-container {
+                padding: 0 var(--space-4);
+            }
+            
+            .benefits-header {
+                margin-bottom: 40px;
+            }
+            
+            .benefits-title {
+                font-size: 36px;
+            }
+            
+            .benefits-cards {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .benefits-card {
+                padding: 32px 24px;
+            }
+            
+            .benefits-card-image {
+                height: 220px;
+                margin-bottom: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .benefits-title {
+                font-size: 32px;
+            }
+            
+            .benefits-description {
+                font-size: 16px;
+            }
+            
+            .benefits-card-title {
+                font-size: 20px;
+            }
+            
+            .benefits-card-description {
+                font-size: 15px;
+            }
+        }    
          @media (max-width: 920px) {
             .nav-menu {
                 display: none;
@@ -16,13 +156,26 @@
             }
          }
         @media (max-width: 768px) {
-           
+            .hero-content {
+                align-items: flex-start;
+                text-align:start;
 
+                padding: var(--space-16) var(--space-4) var(--space-12);
+            }
+
+           
+            .btn-primary{
+                width: 319px;        
+            }
+            .btn-secondary{
+                background-color: transparent;        
+            }
             .hero-title {
                 font-size: var(--text-4xl);
             }
 
-            .hero-buttons {
+         
+             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
             }
@@ -37,16 +190,25 @@
         }
 
         @media (max-width: 640px) {
+           
             .hero-content {
+                align-items: flex-start;
+                text-align:start;
+
                 padding: var(--space-16) var(--space-4) var(--space-12);
             }
 
             .hero-title {
-                font-size: var(--text-3xl);
+                font-size: var(--text-4xl);
             }
 
             .hero-subtitle {
-                font-size: var(--text-base);
+                font-size: var(--text-xl);
+            }
+            .hero-buttons {
+               margin-top: 10px;
+                flex-direction: column;
+                align-items: center;
             }
         }
 @media (min-width: 1024px) {
@@ -69,9 +231,7 @@
                 flex-wrap: wrap;
             }
 
-            .dashboard-card {
-                margin-top: var(--space-8);
-            }
+            
         }
         @media (min-width: 768px) {
             .testimonials-section {
@@ -157,12 +317,10 @@
             }
         }
 
-        /* Ajustement pour desktop - garder le grid original */
         .footer-columns-mobile {
             display: contents;
         }
 
-        /* === RESPONSIVE MOBILE (VERSION VERTICALE) === */
         @media (max-width: 480px) {
             .footer-container {
                 padding: 0 var(--space-4);
@@ -178,7 +336,6 @@
                 gap: var(--space-8);
             }
 
-            /* Brand section mobile */
             .footer-brand {
                 margin-bottom: var(--space-4);
             }
@@ -201,7 +358,6 @@
                 margin-top: var(--space-4);
             }
 
-            /* Ajustement des liens sociaux pour mobile */
             .social-links {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -213,7 +369,6 @@
                 justify-content: flex-start;
             }
 
-            /* Section légale mobile - verticale */
             .footer-bottom {
                 flex-direction: column;
                 align-items: flex-start;
@@ -267,3 +422,97 @@
 
        
 
+        @media (max-width: 1024px) {
+            
+             .how-it-works-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .how-it-works-container > *:first-child {
+        order: 2;
+    }
+
+    .how-it-works-container > *:nth-child(2) {
+        order: 1; 
+    }
+            
+            .app-mockup {
+                width: 350px;
+            }
+            
+            .sidebar-menu {
+                display: none;
+            }
+            
+            .how-it-works-title {
+                font-size: var(--text-4xl);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .how-it-works-section {
+                padding: var(--space-16) 0;
+            }
+            
+            .how-it-works-container {
+                
+                padding: 0 var(--space-6);
+            }
+            
+            .app-mockup {
+                width: 300px;
+                min-height: 400px;
+                padding: var(--space-6);
+            }
+            
+            .how-it-works-title {
+                font-size: var(--text-3xl);
+            }
+        }
+
+         @media (max-width: 768px) {
+            .cta-container {
+                grid-template-columns: 1fr;
+                gap: var(--space-12);
+                text-align: center;
+            }
+
+            .cta-title {
+                font-size: var(--text-4xl);
+            }
+
+            .dashboard-card {
+                max-width: 100%;
+                margin: 0;
+            }
+
+            .cta-section {
+                padding: var(--space-16) var(--space-4);
+            }
+        }
+
+        /* === ANIMATIONS === */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-content > * {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .cta-badge { animation-delay: 0.1s; }
+        .cta-title { animation-delay: 0.2s; }
+        .cta-description { animation-delay: 0.3s; }
+        .cta-button { animation-delay: 0.4s; }
+
+        .dashboard-mockup {
+            animation: fadeInUp 0.8s ease-out 0.5s forwards;
+            opacity: 0;
+        }
